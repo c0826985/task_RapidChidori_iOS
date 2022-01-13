@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8396BFC2790E9030050A5FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396BFB2790E9030050A5FF /* AppDelegate.swift */; };
+		C8396BFE2790E9030050A5FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396BFD2790E9030050A5FF /* SceneDelegate.swift */; };
+		C8396C002790E9030050A5FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396BFF2790E9030050A5FF /* ViewController.swift */; };
+		C8396C032790E9030050A5FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8396C012790E9030050A5FF /* Main.storyboard */; };
+		C8396C052790E9050050A5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8396C042790E9050050A5FF /* Assets.xcassets */; };
+		C8396C082790E9050050A5FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8396C062790E9050050A5FF /* LaunchScreen.storyboard */; };
+		C8396C132790E9050050A5FF /* task_RapidChidori_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396C122790E9050050A5FF /* task_RapidChidori_iOSTests.swift */; };
+		C8396C1D2790E9050050A5FF /* task_RapidChidori_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396C1C2790E9050050A5FF /* task_RapidChidori_iOSUITests.swift */; };
+		C8396C1F2790E9050050A5FF /* task_RapidChidori_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396C1E2790E9050050A5FF /* task_RapidChidori_iOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C8396C0F2790E9050050A5FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8396BF02790E9030050A5FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8396BF72790E9030050A5FF;
+			remoteInfo = task_RapidChidori_iOS;
+		};
+		C8396C192790E9050050A5FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8396BF02790E9030050A5FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8396BF72790E9030050A5FF;
+			remoteInfo = task_RapidChidori_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C8396BF82790E9030050A5FF /* task_RapidChidori_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task_RapidChidori_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8396BFB2790E9030050A5FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C8396BFD2790E9030050A5FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C8396BFF2790E9030050A5FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8396C022790E9030050A5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C8396C042790E9050050A5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8396C072790E9050050A5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C8396C092790E9050050A5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8396C0E2790E9050050A5FF /* task_RapidChidori_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = task_RapidChidori_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8396C122790E9050050A5FF /* task_RapidChidori_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task_RapidChidori_iOSTests.swift; sourceTree = "<group>"; };
+		C8396C182790E9050050A5FF /* task_RapidChidori_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = task_RapidChidori_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8396C1C2790E9050050A5FF /* task_RapidChidori_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task_RapidChidori_iOSUITests.swift; sourceTree = "<group>"; };
+		C8396C1E2790E9050050A5FF /* task_RapidChidori_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task_RapidChidori_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8396BF52790E9030050A5FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8396C0B2790E9050050A5FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8396C152790E9050050A5FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8396BEF2790E9030050A5FF = {
+			isa = PBXGroup;
+			children = (
+				C8396BFA2790E9030050A5FF /* task_RapidChidori_iOS */,
+				C8396C112790E9050050A5FF /* task_RapidChidori_iOSTests */,
+				C8396C1B2790E9050050A5FF /* task_RapidChidori_iOSUITests */,
+				C8396BF92790E9030050A5FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8396BF92790E9030050A5FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8396BF82790E9030050A5FF /* task_RapidChidori_iOS.app */,
+				C8396C0E2790E9050050A5FF /* task_RapidChidori_iOSTests.xctest */,
+				C8396C182790E9050050A5FF /* task_RapidChidori_iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8396BFA2790E9030050A5FF /* task_RapidChidori_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C8396BFB2790E9030050A5FF /* AppDelegate.swift */,
+				C8396BFD2790E9030050A5FF /* SceneDelegate.swift */,
+				C8396BFF2790E9030050A5FF /* ViewController.swift */,
+				C8396C012790E9030050A5FF /* Main.storyboard */,
+				C8396C042790E9050050A5FF /* Assets.xcassets */,
+				C8396C062790E9050050A5FF /* LaunchScreen.storyboard */,
+				C8396C092790E9050050A5FF /* Info.plist */,
+			);
+			path = task_RapidChidori_iOS;
+			sourceTree = "<group>";
+		};
+		C8396C112790E9050050A5FF /* task_RapidChidori_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				C8396C122790E9050050A5FF /* task_RapidChidori_iOSTests.swift */,
+			);
+			path = task_RapidChidori_iOSTests;
+			sourceTree = "<group>";
+		};
+		C8396C1B2790E9050050A5FF /* task_RapidChidori_iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C8396C1C2790E9050050A5FF /* task_RapidChidori_iOSUITests.swift */,
+				C8396C1E2790E9050050A5FF /* task_RapidChidori_iOSUITestsLaunchTests.swift */,
+			);
+			path = task_RapidChidori_iOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8396BF72790E9030050A5FF /* task_RapidChidori_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8396C222790E9050050A5FF /* Build configuration list for PBXNativeTarget "task_RapidChidori_iOS" */;
+			buildPhases = (
+				C8396BF42790E9030050A5FF /* Sources */,
+				C8396BF52790E9030050A5FF /* Frameworks */,
+				C8396BF62790E9030050A5FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = task_RapidChidori_iOS;
+			productName = task_RapidChidori_iOS;
+			productReference = C8396BF82790E9030050A5FF /* task_RapidChidori_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C8396C0D2790E9050050A5FF /* task_RapidChidori_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8396C252790E9050050A5FF /* Build configuration list for PBXNativeTarget "task_RapidChidori_iOSTests" */;
+			buildPhases = (
+				C8396C0A2790E9050050A5FF /* Sources */,
+				C8396C0B2790E9050050A5FF /* Frameworks */,
+				C8396C0C2790E9050050A5FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8396C102790E9050050A5FF /* PBXTargetDependency */,
+			);
+			name = task_RapidChidori_iOSTests;
+			productName = task_RapidChidori_iOSTests;
+			productReference = C8396C0E2790E9050050A5FF /* task_RapidChidori_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C8396C172790E9050050A5FF /* task_RapidChidori_iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8396C282790E9050050A5FF /* Build configuration list for PBXNativeTarget "task_RapidChidori_iOSUITests" */;
+			buildPhases = (
+				C8396C142790E9050050A5FF /* Sources */,
+				C8396C152790E9050050A5FF /* Frameworks */,
+				C8396C162790E9050050A5FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8396C1A2790E9050050A5FF /* PBXTargetDependency */,
+			);
+			name = task_RapidChidori_iOSUITests;
+			productName = task_RapidChidori_iOSUITests;
+			productReference = C8396C182790E9050050A5FF /* task_RapidChidori_iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8396BF02790E9030050A5FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					C8396BF72790E9030050A5FF = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					C8396C0D2790E9050050A5FF = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C8396BF72790E9030050A5FF;
+					};
+					C8396C172790E9050050A5FF = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C8396BF72790E9030050A5FF;
+					};
+				};
+			};
+			buildConfigurationList = C8396BF32790E9030050A5FF /* Build configuration list for PBXProject "task_RapidChidori_iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8396BEF2790E9030050A5FF;
+			productRefGroup = C8396BF92790E9030050A5FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8396BF72790E9030050A5FF /* task_RapidChidori_iOS */,
+				C8396C0D2790E9050050A5FF /* task_RapidChidori_iOSTests */,
+				C8396C172790E9050050A5FF /* task_RapidChidori_iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8396BF62790E9030050A5FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8396C082790E9050050A5FF /* LaunchScreen.storyboard in Resources */,
+				C8396C052790E9050050A5FF /* Assets.xcassets in Resources */,
+				C8396C032790E9030050A5FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8396C0C2790E9050050A5FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8396C162790E9050050A5FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8396BF42790E9030050A5FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8396C002790E9030050A5FF /* ViewController.swift in Sources */,
+				C8396BFC2790E9030050A5FF /* AppDelegate.swift in Sources */,
+				C8396BFE2790E9030050A5FF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8396C0A2790E9050050A5FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8396C132790E9050050A5FF /* task_RapidChidori_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8396C142790E9050050A5FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8396C1D2790E9050050A5FF /* task_RapidChidori_iOSUITests.swift in Sources */,
+				C8396C1F2790E9050050A5FF /* task_RapidChidori_iOSUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8396C102790E9050050A5FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8396BF72790E9030050A5FF /* task_RapidChidori_iOS */;
+			targetProxy = C8396C0F2790E9050050A5FF /* PBXContainerItemProxy */;
+		};
+		C8396C1A2790E9050050A5FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8396BF72790E9030050A5FF /* task_RapidChidori_iOS */;
+			targetProxy = C8396C192790E9050050A5FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C8396C012790E9030050A5FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8396C022790E9030050A5FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C8396C062790E9050050A5FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8396C072790E9050050A5FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C8396C202790E9050050A5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C8396C212790E9050050A5FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8396C232790E9050050A5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = task_RapidChidori_iOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KaiokeN.task-RapidChidori-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8396C242790E9050050A5FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = task_RapidChidori_iOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KaiokeN.task-RapidChidori-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C8396C262790E9050050A5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KaiokeN.task-RapidChidori-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/task_RapidChidori_iOS.app/task_RapidChidori_iOS";
+			};
+			name = Debug;
+		};
+		C8396C272790E9050050A5FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KaiokeN.task-RapidChidori-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/task_RapidChidori_iOS.app/task_RapidChidori_iOS";
+			};
+			name = Release;
+		};
+		C8396C292790E9050050A5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KaiokeN.task-RapidChidori-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = task_RapidChidori_iOS;
+			};
+			name = Debug;
+		};
+		C8396C2A2790E9050050A5FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KaiokeN.task-RapidChidori-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = task_RapidChidori_iOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8396BF32790E9030050A5FF /* Build configuration list for PBXProject "task_RapidChidori_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8396C202790E9050050A5FF /* Debug */,
+				C8396C212790E9050050A5FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8396C222790E9050050A5FF /* Build configuration list for PBXNativeTarget "task_RapidChidori_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8396C232790E9050050A5FF /* Debug */,
+				C8396C242790E9050050A5FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8396C252790E9050050A5FF /* Build configuration list for PBXNativeTarget "task_RapidChidori_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8396C262790E9050050A5FF /* Debug */,
+				C8396C272790E9050050A5FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8396C282790E9050050A5FF /* Build configuration list for PBXNativeTarget "task_RapidChidori_iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8396C292790E9050050A5FF /* Debug */,
+				C8396C2A2790E9050050A5FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8396BF02790E9030050A5FF /* Project object */;
+}
