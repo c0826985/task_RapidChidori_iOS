@@ -8,7 +8,8 @@
 import UIKit
 
 class MyNotesTableViewCell: UITableViewCell,ReusableViewNibLoading {
-
+    
+    @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     override func awakeFromNib() {

@@ -29,6 +29,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
     func loadAddNoteButton() {
         let floatingButton = UIButton()
         floatingButton.setTitle("Add", for: .normal)
+        floatingButton.tag = 101
         floatingButton.backgroundColor = .cyan
         floatingButton.layer.cornerRadius = 25
         floatingButton.setImage(UIImage(named: "add"), for: .normal)
@@ -46,7 +47,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
     
     @objc func addTapped(_ button: UIButton) {
         let notesViewController = self.storyboard?.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
-        notesViewController.savedNote = selectedNote
+        notesViewController.savedNote = (button.tag == 101) ? nil : selectedNote
         notesViewController.delegate = self
         self.present(notesViewController, animated: true)
     }
@@ -129,6 +130,7 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: MyNotesTableViewCell.reuseIdentifier) as? MyNotesTableViewCell{
+            cell.bgView.backgroundColor = (notesArray[indexPath.row].status == true) ? .lightGray : .white
             cell.titleLbl.text = notesArray[indexPath.row].title
             cell.descriptionLbl.text = notesArray[indexPath.row].detail
             return cell
@@ -139,6 +141,18 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedNote = notesArray[indexPath.row]
         addTapped(UIButton())
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            PersistentStorage.shared.context.delete(notesArray[indexPath.row])
+            loadData()
+            tableView.reloadData()
+        }
     }
 }
 
