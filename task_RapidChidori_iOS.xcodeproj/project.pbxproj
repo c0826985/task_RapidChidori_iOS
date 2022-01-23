@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C530C782799BE71000B3E09 /* MyNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C762799BE71000B3E09 /* MyNotesTableViewCell.swift */; };
+		8C530C792799BE71000B3E09 /* MyNotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C530C772799BE71000B3E09 /* MyNotesTableViewCell.xib */; };
+		8C530C802799CA90000B3E09 /* NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C7F2799CA90000B3E09 /* NibLoading.swift */; };
+		8C530C822799CC55000B3E09 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C812799CC55000B3E09 /* NotesModel.swift */; };
+		8C530C842799D509000B3E09 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C832799D509000B3E09 /* NotesViewController.swift */; };
+		8C530C8D279D5AAD000B3E09 /* task_RapidChidori_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C8B279D5AAD000B3E09 /* task_RapidChidori_iOS.xcdatamodeld */; };
+		8C530C90279D5D0C000B3E09 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C8E279D5D0C000B3E09 /* Note+CoreDataClass.swift */; };
+		8C530C91279D5D0C000B3E09 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C8F279D5D0C000B3E09 /* Note+CoreDataProperties.swift */; };
+		8C530C93279D601F000B3E09 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C530C92279D601F000B3E09 /* CoreData.framework */; };
+		8C530C95279D617C000B3E09 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C94279D617C000B3E09 /* PersistentStorage.swift */; };
+		8C530C97279D87F6000B3E09 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C96279D87F6000B3E09 /* Note+CoreDataProperties.swift */; };
 		C8396BFC2790E9030050A5FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396BFB2790E9030050A5FF /* AppDelegate.swift */; };
 		C8396BFE2790E9030050A5FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396BFD2790E9030050A5FF /* SceneDelegate.swift */; };
-		C8396C002790E9030050A5FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396BFF2790E9030050A5FF /* ViewController.swift */; };
+		C8396C002790E9030050A5FF /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396BFF2790E9030050A5FF /* LandingViewController.swift */; };
 		C8396C032790E9030050A5FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8396C012790E9030050A5FF /* Main.storyboard */; };
 		C8396C052790E9050050A5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8396C042790E9050050A5FF /* Assets.xcassets */; };
 		C8396C082790E9050050A5FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8396C062790E9050050A5FF /* LaunchScreen.storyboard */; };
@@ -36,10 +47,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C530C762799BE71000B3E09 /* MyNotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotesTableViewCell.swift; sourceTree = "<group>"; };
+		8C530C772799BE71000B3E09 /* MyNotesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyNotesTableViewCell.xib; sourceTree = "<group>"; };
+		8C530C7F2799CA90000B3E09 /* NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoading.swift; sourceTree = "<group>"; };
+		8C530C812799CC55000B3E09 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
+		8C530C832799D509000B3E09 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		8C530C8C279D5AAD000B3E09 /* task_RapidChidori_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = task_RapidChidori_iOS.xcdatamodel; sourceTree = "<group>"; };
+		8C530C8E279D5D0C000B3E09 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8C530C8F279D5D0C000B3E09 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8C530C92279D601F000B3E09 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8C530C94279D617C000B3E09 /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
+		8C530C96279D87F6000B3E09 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "task_RapidChidori_iOS/Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C8396BF82790E9030050A5FF /* task_RapidChidori_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task_RapidChidori_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8396BFB2790E9030050A5FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8396BFD2790E9030050A5FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C8396BFF2790E9030050A5FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8396BFF2790E9030050A5FF /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		C8396C022790E9030050A5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8396C042790E9050050A5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8396C072790E9050050A5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C530C93279D601F000B3E09 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,13 +99,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C530C85279D5A06000B3E09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C530C92279D601F000B3E09 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C8396BEF2790E9030050A5FF = {
 			isa = PBXGroup;
 			children = (
+				8C530C96279D87F6000B3E09 /* Note+CoreDataProperties.swift */,
 				C8396BFA2790E9030050A5FF /* task_RapidChidori_iOS */,
 				C8396C112790E9050050A5FF /* task_RapidChidori_iOSTests */,
 				C8396C1B2790E9050050A5FF /* task_RapidChidori_iOSUITests */,
 				C8396BF92790E9030050A5FF /* Products */,
+				8C530C85279D5A06000B3E09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +132,22 @@
 		C8396BFA2790E9030050A5FF /* task_RapidChidori_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8C530C8E279D5D0C000B3E09 /* Note+CoreDataClass.swift */,
+				8C530C8F279D5D0C000B3E09 /* Note+CoreDataProperties.swift */,
+				8C530C8B279D5AAD000B3E09 /* task_RapidChidori_iOS.xcdatamodeld */,
 				C8396BFB2790E9030050A5FF /* AppDelegate.swift */,
 				C8396BFD2790E9030050A5FF /* SceneDelegate.swift */,
-				C8396BFF2790E9030050A5FF /* ViewController.swift */,
+				8C530C812799CC55000B3E09 /* NotesModel.swift */,
+				C8396BFF2790E9030050A5FF /* LandingViewController.swift */,
 				C8396C012790E9030050A5FF /* Main.storyboard */,
 				C8396C042790E9050050A5FF /* Assets.xcassets */,
 				C8396C062790E9050050A5FF /* LaunchScreen.storyboard */,
 				C8396C092790E9050050A5FF /* Info.plist */,
+				8C530C7F2799CA90000B3E09 /* NibLoading.swift */,
+				8C530C762799BE71000B3E09 /* MyNotesTableViewCell.swift */,
+				8C530C772799BE71000B3E09 /* MyNotesTableViewCell.xib */,
+				8C530C832799D509000B3E09 /* NotesViewController.swift */,
+				8C530C94279D617C000B3E09 /* PersistentStorage.swift */,
 			);
 			path = task_RapidChidori_iOS;
 			sourceTree = "<group>";
@@ -234,6 +276,7 @@
 				C8396C082790E9050050A5FF /* LaunchScreen.storyboard in Resources */,
 				C8396C052790E9050050A5FF /* Assets.xcassets in Resources */,
 				C8396C032790E9030050A5FF /* Main.storyboard in Resources */,
+				8C530C792799BE71000B3E09 /* MyNotesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +301,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8396C002790E9030050A5FF /* ViewController.swift in Sources */,
+				8C530C8D279D5AAD000B3E09 /* task_RapidChidori_iOS.xcdatamodeld in Sources */,
+				C8396C002790E9030050A5FF /* LandingViewController.swift in Sources */,
+				8C530C802799CA90000B3E09 /* NibLoading.swift in Sources */,
 				C8396BFC2790E9030050A5FF /* AppDelegate.swift in Sources */,
+				8C530C842799D509000B3E09 /* NotesViewController.swift in Sources */,
+				8C530C97279D87F6000B3E09 /* Note+CoreDataProperties.swift in Sources */,
 				C8396BFE2790E9030050A5FF /* SceneDelegate.swift in Sources */,
+				8C530C90279D5D0C000B3E09 /* Note+CoreDataClass.swift in Sources */,
+				8C530C782799BE71000B3E09 /* MyNotesTableViewCell.swift in Sources */,
+				8C530C822799CC55000B3E09 /* NotesModel.swift in Sources */,
+				8C530C95279D617C000B3E09 /* PersistentStorage.swift in Sources */,
+				8C530C91279D5D0C000B3E09 /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +670,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C530C8B279D5AAD000B3E09 /* task_RapidChidori_iOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C530C8C279D5AAD000B3E09 /* task_RapidChidori_iOS.xcdatamodel */,
+			);
+			currentVersion = 8C530C8C279D5AAD000B3E09 /* task_RapidChidori_iOS.xcdatamodel */;
+			path = task_RapidChidori_iOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C8396BF02790E9030050A5FF /* Project object */;
 }
