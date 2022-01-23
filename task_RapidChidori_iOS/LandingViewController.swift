@@ -75,7 +75,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
     
     @IBAction func sortbyFilterAction(_ sender: Any) {
         guard !notesArray.isEmpty else {
-            showAlert(message: "No Notes Available")
+            showAlert(message: "No Tasks Available")
             return
         }
         
