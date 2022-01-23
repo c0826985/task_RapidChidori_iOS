@@ -24,22 +24,24 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="u4w-LI-LTH"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pOG-Xn-umF">
+                            <searchBar contentMode="redraw" text="WRITE FILE NAME TO SEARCH THE FILE" translatesAutoresizingMaskIntoConstraints="NO" id="pOG-Xn-umF">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7Y8-kc-ihm"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPn-pq-Gui">
-                                <rect key="frame" x="320" y="93" width="74" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPn-pq-Gui" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="321.5" y="93" width="72.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="9fl-79-KJQ"/>
                                     <constraint firstAttribute="height" constant="40" id="RrW-LQ-T17"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Sort By">
+                                <buttonConfiguration key="configuration" style="gray" title="To Sort">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="sortbyFilterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mVX-bt-3OG"/>
