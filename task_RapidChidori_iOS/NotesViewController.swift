@@ -112,6 +112,11 @@ class NotesViewController: UIViewController {
         }
     }
     
+    
+    
+    @IBAction func addRecording(_ sender: UIButton) {
+    }
+    
     func showAlert(message: String) {
         let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
