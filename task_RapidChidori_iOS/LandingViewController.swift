@@ -18,7 +18,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
     
     @IBOutlet weak var noNotesLbl: UILabel!
     var selectedNote:Note?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -66,7 +66,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
     func loadTable() {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200.0
-    
+        
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.clear
         tableView.register(MyNotesTableViewCell.nib, forCellReuseIdentifier: MyNotesTableViewCell.reuseIdentifier)
@@ -77,9 +77,9 @@ class LandingViewController: UIViewController,NotesViewProtocol {
             showAlert(message: "No Notes Available")
             return
         }
-            
+        
         let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-
+        
         // create an action
         let firstAction: UIAlertAction = UIAlertAction(title: "Sort by A-Z", style: .default) { action -> Void in
             self.notesArray = self.notesArray.sorted(by: {$0.title! < $1.title!})
@@ -87,13 +87,13 @@ class LandingViewController: UIViewController,NotesViewProtocol {
             self.sortByBtn.setTitle("Sorted by A-Z", for: .normal)
             
         }
-
+        
         let secondAction: UIAlertAction = UIAlertAction(title: "Sort by Date Added", style: .default) { action -> Void in
             self.notesArray = self.notesArray.sorted(by: {$0.date! < $1.date!})
             self.tableView.reloadData()
             self.sortByBtn.setTitle("Sorted by Date", for: .normal)
         }
-
+        
         let clearFiltersAction: UIAlertAction = UIAlertAction(title: "Clear Filter", style: .default) { action -> Void in
             self.notesArray = self.filteredNotesArray
             self.tableView.reloadData()
@@ -106,7 +106,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
         actionSheetController.addAction(clearFiltersAction)
         actionSheetController.addAction(cancelAction)
         // present an actionSheet...
-         present(actionSheetController, animated: true, completion: nil)   // doesn't work for iPad
+        present(actionSheetController, animated: true, completion: nil)   // doesn't work for iPad
     }
     
     func showAlert(message: String) {
@@ -126,7 +126,7 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notesArray.count
     }
-        
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: MyNotesTableViewCell.reuseIdentifier) as? MyNotesTableViewCell{
             cell.titleLbl.text = notesArray[indexPath.row].title
