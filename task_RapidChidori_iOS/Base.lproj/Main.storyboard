@@ -184,6 +184,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="addR"/>
+                                <connections>
+                                    <action selector="addRecording:" destination="Az1-5a-teq" eventType="touchUpInside" id="xGs-Gu-q1P"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdV-Cr-Y99">
                                 <rect key="frame" x="306" y="719" width="11" height="70"/>

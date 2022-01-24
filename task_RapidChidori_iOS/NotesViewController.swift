@@ -115,6 +115,10 @@ class NotesViewController: UIViewController {
     
     
     @IBAction func addRecording(_ sender: UIButton) {
+        
+        
+        
+        
     }
     
     func showAlert(message: String) {
