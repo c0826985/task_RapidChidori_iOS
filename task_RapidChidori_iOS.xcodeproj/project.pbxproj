@@ -21,6 +21,7 @@
 		8CB1A25B279DDED8002AB9AD /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1A257279DDED8002AB9AD /* Note+CoreDataProperties.swift */; };
 		8CB1A25C279DDED8002AB9AD /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1A258279DDED8002AB9AD /* Image+CoreDataClass.swift */; };
 		8CB1A25D279DDED8002AB9AD /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1A259279DDED8002AB9AD /* Image+CoreDataProperties.swift */; };
+		A993BCFE279E0F0400DE7D7C /* 3138010.png in Resources */ = {isa = PBXBuildFile; fileRef = A993BCFD279E0F0400DE7D7C /* 3138010.png */; };
 		C8396BFC2790E9030050A5FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396BFB2790E9030050A5FF /* AppDelegate.swift */; };
 		C8396BFE2790E9030050A5FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396BFD2790E9030050A5FF /* SceneDelegate.swift */; };
 		C8396C002790E9030050A5FF /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396BFF2790E9030050A5FF /* LandingViewController.swift */; };
@@ -64,6 +65,7 @@
 		8CB1A257279DDED8002AB9AD /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "task_RapidChidori_iOS/Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8CB1A258279DDED8002AB9AD /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataClass.swift"; path = "task_RapidChidori_iOS/Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8CB1A259279DDED8002AB9AD /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataProperties.swift"; path = "task_RapidChidori_iOS/Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A993BCFD279E0F0400DE7D7C /* 3138010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3138010.png; path = ../../Downloads/3138010.png; sourceTree = "<group>"; };
 		C8396BF82790E9030050A5FF /* task_RapidChidori_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task_RapidChidori_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8396BFB2790E9030050A5FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8396BFD2790E9030050A5FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		C8396BEF2790E9030050A5FF = {
 			isa = PBXGroup;
 			children = (
+				A993BCFD279E0F0400DE7D7C /* 3138010.png */,
 				8CB1A256279DDED8002AB9AD /* Note+CoreDataClass.swift */,
 				8CB1A257279DDED8002AB9AD /* Note+CoreDataProperties.swift */,
 				8CB1A258279DDED8002AB9AD /* Image+CoreDataClass.swift */,
@@ -284,6 +287,7 @@
 			files = (
 				C8396C082790E9050050A5FF /* LaunchScreen.storyboard in Resources */,
 				C8396C052790E9050050A5FF /* Assets.xcassets in Resources */,
+				A993BCFE279E0F0400DE7D7C /* 3138010.png in Resources */,
 				C8396C032790E9030050A5FF /* Main.storyboard in Resources */,
 				8C530C792799BE71000B3E09 /* MyNotesTableViewCell.xib in Resources */,
 				8C530CA0279DD334000B3E09 /* ImageCollectionViewCell.xib in Resources */,
