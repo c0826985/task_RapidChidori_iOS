@@ -11,6 +11,7 @@ import UIKit
 class LandingViewController: UIViewController,NotesViewProtocol {
     
     
+    @IBOutlet weak var searchbar: UISearchBar!
     @IBOutlet weak var sortByBtn: UIButton!
     var notesArray = [Note]()
     var filteredNotesArray = [Note]()
@@ -18,7 +19,8 @@ class LandingViewController: UIViewController,NotesViewProtocol {
     
     @IBOutlet weak var noNotesLbl: UILabel!
     var selectedNote:Note?
-    
+    var isTyping: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -156,3 +158,11 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension LandingViewController:UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        notesArray = searchText.isEmpty ? filteredNotesArray : filteredNotesArray.filter({ note in
+            return (note.title?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil) || (note.detail?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil)
+        })
+        tableView.reloadData()
+    }
+}

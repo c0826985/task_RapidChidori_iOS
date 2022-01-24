@@ -24,12 +24,19 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="u4w-LI-LTH"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pOG-Xn-umF">
+                            <searchBar contentMode="redraw" placeholder="Search Note" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOG-Xn-umF">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7Y8-kc-ihm"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AxR-ds-Re5"/>
+                                </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPn-pq-Gui">
                                 <rect key="frame" x="320" y="93" width="74" height="40"/>
@@ -73,6 +80,7 @@
                     </view>
                     <connections>
                         <outlet property="noNotesLbl" destination="UnT-Va-Ubl" id="bTV-Pg-IVP"/>
+                        <outlet property="searchbar" destination="pOG-Xn-umF" id="Xqc-p1-J2o"/>
                         <outlet property="sortByBtn" destination="WPn-pq-Gui" id="xBQ-g4-l0d"/>
                         <outlet property="tableView" destination="ETb-gf-yFW" id="7QZ-jN-1Dh"/>
                     </connections>
