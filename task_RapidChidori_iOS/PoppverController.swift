@@ -2,10 +2,12 @@
 //  PoppverController.swift
 //  task_RapidChidori_iOS
 //
-//  Created by Rohit Sharma on 26/01/22.
+//  Created by Shubham Behal on 26/01/22.
 //
 
 import UIKit
+
+//This controller is responsible to show images in a zoomed state
 
 class PoppverController: UIViewController {
 
@@ -17,6 +19,8 @@ class PoppverController: UIViewController {
             imageView.image = image
         }
     }
+    
+    //close image on tap outside its boundary
     @IBAction func tapoutside(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

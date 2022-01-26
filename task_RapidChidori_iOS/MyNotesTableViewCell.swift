@@ -2,11 +2,12 @@
 //  MyNotesTableViewCell.swift
 //  task_RapidChidori_iOS
 //
-//  Created by Rohit Sharma on 20/01/22.
+//  Created by Shubham Behal on 20/01/22.
 //
 
 import UIKit
 
+//child view of notes shown on the main screen
 class MyNotesTableViewCell: UITableViewCell,ReusableViewNibLoading {
     
     @IBOutlet weak var dateLbl: UILabel!

@@ -8,6 +8,7 @@
 import UIKit
 
 
+//controller for the landing page
 class LandingViewController: UIViewController,NotesViewProtocol {
     
     
@@ -28,6 +29,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
         loadAddNoteButton()
     }
     
+    //to handle add note floating button
     func loadAddNoteButton() {
         let floatingButton = UIButton()
         floatingButton.setTitle("Add", for: .normal)
@@ -55,6 +57,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
         self.present(notesViewController, animated: true)
     }
     
+    //on launch of app fetching data from sqlite if already present
     func loadData() {
         do {
             let myNotes = try PersistentStorage.shared.context.fetch(Note.fetchRequest())
@@ -76,6 +79,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
         tableView.register(MyNotesTableViewCell.nib, forCellReuseIdentifier: MyNotesTableViewCell.reuseIdentifier)
     }
     
+    //handle sort by button click
     @IBAction func sortbyFilterAction(_ sender: Any) {
         searchbar.resignFirstResponder()
         guard !notesArray.isEmpty else {
@@ -126,6 +130,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
         tableView.reloadData()
     }
     
+    //manipulating time to show on screen
     func getLocalDate(date: Date?) -> String? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
@@ -139,6 +144,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
     }
 }
 
+//to populate list of notes on landing screen
 extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notesArray.count
@@ -176,6 +182,7 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+//handle search bar functionality
 extension LandingViewController:UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         notesArray = searchText.isEmpty ? filteredNotesArray : filteredNotesArray.filter({ note in

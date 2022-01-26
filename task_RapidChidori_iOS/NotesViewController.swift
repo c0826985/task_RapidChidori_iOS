@@ -2,7 +2,7 @@
 //  NotesViewController.swift
 //  task_RapidChidori_iOS
 //
-//  Created by Rohit Sharma on 20/01/22.
+//  Created by Shubham Behal on 20/01/22.
 //
 
 import UIKit
@@ -13,6 +13,7 @@ protocol NotesViewProtocol {
     func didSaveNote()
 }
 
+//this controller is for the second screen i.e. the screen where note data is filled
 class NotesViewController: UIViewController {
     @IBOutlet weak var voiceNoteBtn: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -35,6 +36,7 @@ class NotesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //setup intial UI
     func setUI() {
         notesDetailedView.text = "Task Description"
         notesDetailedView.textColor = UIColor.lightGray
@@ -62,6 +64,7 @@ class NotesViewController: UIViewController {
         notesDetailedView.textColor = UIColor.black
     }
     
+    //to handle the mark complete button click
     @IBAction func markComplete(_ sender: Any) {
         let alert = UIAlertController(title: "Alert", message: "Are you sure  you want to mark this complete?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {_ in
@@ -86,10 +89,13 @@ class NotesViewController: UIViewController {
         }
     }
     
+    //to handle the add voice note button click
     @IBAction func voiceNoteBtnAction(_ sender: Any) {
         
     }
     
+    
+    //to handle the attach image button click
     @IBAction func attachImage(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
             print("Button capture")
@@ -102,6 +108,7 @@ class NotesViewController: UIViewController {
         }
     }
     
+    //to handle the save note button click
     @IBAction func saveBtnClicked(_ sender: Any) {
         if let title = titleNameField.text, title.isEmpty {
             showAlert(message: "Please Enter Task Title")
@@ -137,10 +144,9 @@ class NotesViewController: UIViewController {
     @IBAction func addRecording(_ sender: UIButton) {
         
         
-        
-        
     }
     
+    //to show alert on mark complete button click
     func showAlert(message: String) {
         let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -164,6 +170,7 @@ extension NotesViewController: UITextViewDelegate {
     }
 }
 
+//on click of images
 extension NotesViewController : UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
@@ -176,7 +183,7 @@ extension NotesViewController : UIImagePickerControllerDelegate & UINavigationCo
     }
 }
 
-
+//horizontal list of images
 extension NotesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count

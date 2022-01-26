@@ -2,18 +2,20 @@
 //  PersistentStorage.swift
 //  task_RapidChidori_iOS
 //
-//  Created by Rohit Sharma on 23/01/22.
+//  Created by Shubham Behal on 23/01/22.
 //
 
 import Foundation
 import CoreData
 
+
+//this is the singleton class of core data to keep data persistant through multiple sessions of app
 final class PersistentStorage {
     
     private init() {}
     static let shared = PersistentStorage()
     
-    // MARK: - Core Data
+//core data
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "task_RapidChidori_iOS")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -26,8 +28,8 @@ final class PersistentStorage {
         
     lazy var context = persistentContainer.viewContext
 
-        // MARK: - Core Data Saving support
-        
+       
+//saving core data 
         func saveContext () {
             if context.hasChanges {
                 do {
