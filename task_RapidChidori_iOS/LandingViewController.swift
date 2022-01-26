@@ -48,6 +48,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
     }
     
     @objc func addTapped(_ button: UIButton) {
+        searchbar.resignFirstResponder()
         let notesViewController = self.storyboard?.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
         notesViewController.savedNote = (button.tag == 101) ? nil : selectedNote
         notesViewController.delegate = self
@@ -76,6 +77,7 @@ class LandingViewController: UIViewController,NotesViewProtocol {
     }
     
     @IBAction func sortbyFilterAction(_ sender: Any) {
+        searchbar.resignFirstResponder()
         guard !notesArray.isEmpty else {
             showAlert(message: "No Notes Available")
             return
@@ -152,6 +154,7 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
             PersistentStorage.shared.context.delete(notesArray[indexPath.row])
+            PersistentStorage.shared.saveContext()
             loadData()
             tableView.reloadData()
         }
@@ -163,6 +166,13 @@ extension LandingViewController:UISearchBarDelegate {
         notesArray = searchText.isEmpty ? filteredNotesArray : filteredNotesArray.filter({ note in
             return (note.title?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil) || (note.detail?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil)
         })
+        tableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.text = ""
+        notesArray = filteredNotesArray
         tableView.reloadData()
     }
 }

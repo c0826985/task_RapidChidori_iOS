@@ -21,11 +21,9 @@ class NotesViewController: UIViewController {
     var imagePicker = UIImagePickerController()
     var savedNote:Note?
     var images = [Image]()
-    
-    private let _numberOfColumn: CGFloat = 3.0
-    private let _minimumInteritemSpacing: CGFloat = 8.0
-    private let _minimumLineSpacing: CGFloat = 9.0
-    private let _periodCellHeight: CGFloat = 32.0
+    let rows = 1
+    let columnsInPage = 3
+    var itemsInPage: Int { return columnsInPage*rows }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,11 +100,12 @@ class NotesViewController: UIViewController {
                     guard let editedNote = myNotes.first(where: {$0.objectID == note.objectID}) else {return}
                     editedNote.title = titleNameField.text
                     editedNote.detail = notesDetailedView.text
+                    editedNote.images = Set(images) as NSSet
                 } catch let error {
                     print(error)
                 }
             } else {
-                let note  = Note(context: PersistentStorage.shared.context)
+                let note = Note(context: PersistentStorage.shared.context)
                 note.title = titleNameField.text
                 note.detail = notesDetailedView.text
                 note.images = Set(images) as NSSet
@@ -153,78 +152,38 @@ extension NotesViewController : UIImagePickerControllerDelegate & UINavigationCo
     }
 }
 
-//
-//extension NotesViewController: UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return images.count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.reuseIdentifier,
-//                                                         for: indexPath) as? ImageCollectionViewCell {
-//            let image = images[indexPath.row]
-//            if let imageData = image.noteImage {
-//                cell.imageView.image = UIImage(data:imageData,scale:0.5)
-//            }
-//            return cell
-//        }
-//        return UICollectionViewCell()
-//    }
-//}
-//
-//extension NotesViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        guard let cell: ImageCollectionViewCell = Bundle.main.loadNibNamed(ImageCollectionViewCell.reuseIdentifier,
-//                                                                      owner: self,
-//                                                                      options: nil)?.first as? ImageCollectionViewCell else {
-//            return CGSize.zero
-//        }
-////        cell.configureCell(name: images[indexPath.row])
-//        cell.setNeedsLayout()
-//        cell.layoutIfNeeded()
-//        let size: CGSize = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
-//        return CGSize(width: size.width, height: 30)
-//    }
-//}
 
-extension NotesViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
+extension NotesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return self._minimumLineSpacing
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return self._minimumInteritemSpacing
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.reuseIdentifier,
+                                                         for: indexPath) as? ImageCollectionViewCell {
+            let t = indexPath.item / itemsInPage
+                let i = indexPath.item / rows - t*columnsInPage
+                let j = indexPath.item % rows
+                let item = (j*columnsInPage+i) + t*itemsInPage
+
+                guard item < images.count else {
+                    cell.isHidden = true
+                    return cell
+                }
+            cell.isHidden = false
+            let image = images[indexPath.row]
+            if let imageData = image.noteImage {
+                cell.imageView.image = UIImage(data:imageData,scale:0.1)
+            }
+            return cell
+        }
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
-        var space: CGFloat = (flowayout?.minimumInteritemSpacing ?? self._minimumInteritemSpacing) * (self._numberOfColumn - 1)
-        space += (flowayout?.sectionInset.left ?? 16.0) + (flowayout?.sectionInset.right ?? 16.0)
-        let size:CGFloat = (collectionView.frame.size.width - space) / self._numberOfColumn
-        return CGSize(width: size, height: _periodCellHeight)
+        let cellWidth = 100
+        let cellHeight = 30
+        return CGSize(width: cellWidth, height: cellHeight)
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
-        let image = images[indexPath.row]
-        if let imageData = image.noteImage {
-            cell.imageView.image = UIImage(data:imageData,scale:0.5)
-        }
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
 }
-
