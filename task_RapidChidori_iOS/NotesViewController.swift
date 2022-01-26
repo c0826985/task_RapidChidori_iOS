@@ -32,7 +32,7 @@ class NotesViewController: UIViewController {
     }
     
     func setUI() {
-        notesDetailedView.text = "Note Details"
+        notesDetailedView.text = "Task Description"
         notesDetailedView.textColor = UIColor.lightGray
         collectionView?.register(ImageCollectionViewCell.nib, forCellWithReuseIdentifier: ImageCollectionViewCell.reuseIdentifier)
         if let flowLayout = self.collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -89,9 +89,9 @@ class NotesViewController: UIViewController {
     
     @IBAction func saveBtnClicked(_ sender: Any) {
         if let title = titleNameField.text, title.isEmpty {
-            showAlert(message: "Please Enter Note Title")
+            showAlert(message: "Please Enter Task Title")
         } else if let detail = notesDetailedView.text, detail.isEmpty {
-            showAlert(message: "Please Enter Notes Description")
+            showAlert(message: "Please Enter Task Description")
         } else {
             
             if let note = savedNote {
@@ -117,6 +117,15 @@ class NotesViewController: UIViewController {
         }
     }
     
+    
+    
+    @IBAction func addRecording(_ sender: UIButton) {
+        
+        
+        
+        
+    }
+    
     func showAlert(message: String) {
         let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -134,7 +143,7 @@ extension NotesViewController: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "Placeholder"
+            textView.text = "Task Description"
             textView.textColor = UIColor.lightGray
         }
     }
