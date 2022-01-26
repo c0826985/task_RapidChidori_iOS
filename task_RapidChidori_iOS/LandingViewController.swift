@@ -11,7 +11,6 @@ import UIKit
 //controller for the landing page
 class LandingViewController: UIViewController,NotesViewProtocol {
     
-    
     @IBOutlet weak var searchbar: UISearchBar!
     @IBOutlet weak var sortByBtn: UIButton!
     var notesArray = [Note]()
