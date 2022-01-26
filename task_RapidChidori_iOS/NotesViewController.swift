@@ -14,10 +14,14 @@ protocol NotesViewProtocol {
 }
 
 class NotesViewController: UIViewController {
+    @IBOutlet weak var voiceNoteBtn: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     var delegate:NotesViewProtocol?
+    @IBOutlet weak var attachImgBtn: UIButton!
+    @IBOutlet weak var SaveBtn: UIButton!
     @IBOutlet weak var notesDetailedView: UITextView!
     @IBOutlet weak var titleNameField: UITextField!
+    @IBOutlet weak var markCompleteBtn: UIButton!
     var imagePicker = UIImagePickerController()
     var savedNote:Note?
     var images = [Image]()
@@ -42,7 +46,14 @@ class NotesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let note = savedNote else {return}
+        guard let note = savedNote else {
+            markCompleteBtn.isEnabled = false
+            return
+        }
+        voiceNoteBtn.isEnabled = !note.status
+        markCompleteBtn.isEnabled = !note.status
+        SaveBtn.isEnabled = !note.status
+        attachImgBtn.isEnabled = !note.status
         titleNameField.text = note.title
         notesDetailedView.text = note.detail
         if let noteimages = note.images?.allObjects as? [Image] {
@@ -73,6 +84,10 @@ class NotesViewController: UIViewController {
                 print(error)
             }
         }
+    }
+    
+    @IBAction func voiceNoteBtnAction(_ sender: Any) {
+        
     }
     
     @IBAction func attachImage(_ sender: Any) {
@@ -171,14 +186,14 @@ extension NotesViewController: UICollectionViewDataSource, UICollectionViewDeleg
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.reuseIdentifier,
                                                          for: indexPath) as? ImageCollectionViewCell {
             let t = indexPath.item / itemsInPage
-                let i = indexPath.item / rows - t*columnsInPage
-                let j = indexPath.item % rows
-                let item = (j*columnsInPage+i) + t*itemsInPage
-
-                guard item < images.count else {
-                    cell.isHidden = true
-                    return cell
-                }
+            let i = indexPath.item / rows - t*columnsInPage
+            let j = indexPath.item % rows
+            let item = (j*columnsInPage+i) + t*itemsInPage
+            
+            guard item < images.count else {
+                cell.isHidden = true
+                return cell
+            }
             cell.isHidden = false
             let image = images[indexPath.row]
             if let imageData = image.noteImage {
@@ -195,4 +210,12 @@ extension NotesViewController: UICollectionViewDataSource, UICollectionViewDeleg
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let image = images[indexPath.row]
+        if let imageData = image.noteImage, let popupViewController = self.storyboard?.instantiateViewController(withIdentifier: "PoppverController") as? PoppverController {
+            popupViewController.image = UIImage(data:imageData,scale:0.75)
+            popupViewController.modalPresentationStyle = .popover
+            present(popupViewController, animated: true, completion:nil)
+        }
+    }
 }

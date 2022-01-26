@@ -9,6 +9,7 @@ import UIKit
 
 class MyNotesTableViewCell: UITableViewCell,ReusableViewNibLoading {
     
+    @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
@@ -16,13 +17,11 @@ class MyNotesTableViewCell: UITableViewCell,ReusableViewNibLoading {
         super.awakeFromNib()
         titleLbl.text = "my first note"
         descriptionLbl.text = "my note description"
+        dateLbl.text = "note date"
         // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
 }

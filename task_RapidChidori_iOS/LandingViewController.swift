@@ -125,6 +125,18 @@ class LandingViewController: UIViewController,NotesViewProtocol {
         loadData()
         tableView.reloadData()
     }
+    
+    func getLocalDate(date: Date?) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        dateFormatter.dateFormat = "EEE, MMM d, yyyy - h:mm a"
+        dateFormatter.timeZone = NSTimeZone.local
+        if let mydate = date {
+            return dateFormatter.string(from: mydate)
+        }
+        return nil
+    }
 }
 
 extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
@@ -135,13 +147,16 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: MyNotesTableViewCell.reuseIdentifier) as? MyNotesTableViewCell{
             cell.bgView.backgroundColor = (notesArray[indexPath.row].status == true) ? .lightGray : .white
+            cell.bgView.alpha = (notesArray[indexPath.row].status == true) ? 0.5 : 1.0
             cell.titleLbl.text = notesArray[indexPath.row].title
             cell.descriptionLbl.text = notesArray[indexPath.row].detail
+            cell.dateLbl.text = getLocalDate(date: notesArray[indexPath.row].date)
             return cell
         }
         return UITableViewCell()
     }
     
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedNote = notesArray[indexPath.row]
         addTapped(UIButton())
@@ -164,7 +179,7 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
 extension LandingViewController:UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         notesArray = searchText.isEmpty ? filteredNotesArray : filteredNotesArray.filter({ note in
-            return (note.title?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil) || (note.detail?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil)
+            return (note.title?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil)
         })
         tableView.reloadData()
     }
@@ -175,4 +190,21 @@ extension LandingViewController:UISearchBarDelegate {
         notesArray = filteredNotesArray
         tableView.reloadData()
     }
+}
+extension Date {
+
+    // Convert local time to UTC (or GMT)
+    func toGlobalTime() -> Date {
+        let timezone = TimeZone.current
+        let seconds = -TimeInterval(timezone.secondsFromGMT(for: self))
+        return Date(timeInterval: seconds, since: self)
+    }
+
+    // Convert UTC (or GMT) to local time
+    func toLocalTime() -> Date {
+        let timezone = TimeZone.current
+        let seconds = TimeInterval(timezone.secondsFromGMT(for: self))
+        return Date(timeInterval: seconds, since: self)
+    }
+
 }

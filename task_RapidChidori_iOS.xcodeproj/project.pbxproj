@@ -17,6 +17,7 @@
 		8C530C95279D617C000B3E09 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C94279D617C000B3E09 /* PersistentStorage.swift */; };
 		8C530C9F279DD334000B3E09 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C9D279DD334000B3E09 /* ImageCollectionViewCell.swift */; };
 		8C530CA0279DD334000B3E09 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C530C9E279DD334000B3E09 /* ImageCollectionViewCell.xib */; };
+		8C75553527A1543A0085156A /* PoppverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75553427A1543A0085156A /* PoppverController.swift */; };
 		8CB1A25A279DDED8002AB9AD /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1A256279DDED8002AB9AD /* Note+CoreDataClass.swift */; };
 		8CB1A25B279DDED8002AB9AD /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1A257279DDED8002AB9AD /* Note+CoreDataProperties.swift */; };
 		8CB1A25C279DDED8002AB9AD /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1A258279DDED8002AB9AD /* Image+CoreDataClass.swift */; };
@@ -60,6 +61,7 @@
 		8C530C94279D617C000B3E09 /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
 		8C530C9D279DD334000B3E09 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C530C9E279DD334000B3E09 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		8C75553427A1543A0085156A /* PoppverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppverController.swift; sourceTree = "<group>"; };
 		8CB1A256279DDED8002AB9AD /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataClass.swift"; path = "task_RapidChidori_iOS/Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8CB1A257279DDED8002AB9AD /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "task_RapidChidori_iOS/Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8CB1A258279DDED8002AB9AD /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataClass.swift"; path = "task_RapidChidori_iOS/Image+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				8C530C94279D617C000B3E09 /* PersistentStorage.swift */,
 				8C530C9D279DD334000B3E09 /* ImageCollectionViewCell.swift */,
 				8C530C9E279DD334000B3E09 /* ImageCollectionViewCell.xib */,
+				8C75553427A1543A0085156A /* PoppverController.swift */,
 			);
 			path = task_RapidChidori_iOS;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			files = (
 				8C530C8D279D5AAD000B3E09 /* task_RapidChidori_iOS.xcdatamodeld in Sources */,
 				C8396C002790E9030050A5FF /* LandingViewController.swift in Sources */,
+				8C75553527A1543A0085156A /* PoppverController.swift in Sources */,
 				8CB1A25A279DDED8002AB9AD /* Note+CoreDataClass.swift in Sources */,
 				8C530C9F279DD334000B3E09 /* ImageCollectionViewCell.swift in Sources */,
 				8C530C802799CA90000B3E09 /* NibLoading.swift in Sources */,

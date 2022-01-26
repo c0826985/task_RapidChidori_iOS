@@ -116,31 +116,8 @@
                                     <outlet property="delegate" destination="Az1-5a-teq" id="cIK-dF-xg0"/>
                                 </connections>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPh-sV-L7c">
-                                <rect key="frame" x="30" y="802" width="354" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="F78-b7-4m9"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Save">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="saveBtnClicked:" destination="Az1-5a-teq" eventType="touchUpInside" id="7py-VD-CzV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdR-uR-lZh">
-                                <rect key="frame" x="30" y="731" width="164.5" height="50"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Mark Complete">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="markComplete:" destination="Az1-5a-teq" eventType="touchUpInside" id="Qrn-G7-Vtp"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0PK-L9-FsD">
-                                <rect key="frame" x="30" y="532" width="354" height="160"/>
+                                <rect key="frame" x="30" y="532" width="354" height="162"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZRj-Z6-sDj">
                                     <size key="itemSize" width="139" height="149"/>
@@ -151,7 +128,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="ICl-eT-1PQ" customClass="ImageCollectionViewCell" customModule="task_RapidChidori_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="5.5" width="139" height="149"/>
+                                        <rect key="frame" x="0.0" y="6.5" width="139" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="139" height="149"/>
@@ -165,55 +142,145 @@
                                     <outlet property="delegate" destination="Az1-5a-teq" id="6FJ-VO-rB3"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRG-2z-mPE">
-                                <rect key="frame" x="219.5" y="731" width="164.5" height="50"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Attach Image">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="attachImage:" destination="Az1-5a-teq" eventType="touchUpInside" id="2Bf-Ft-yKa"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8CA-iO-CNH">
+                                <rect key="frame" x="30" y="752" width="354" height="110"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1jo-Ij-cu2">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdR-uR-lZh">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Lb1-EA-nBf"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Mark Complete">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="markComplete:" destination="Az1-5a-teq" eventType="touchUpInside" id="Qrn-G7-Vtp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRG-2z-mPE">
+                                                <rect key="frame" x="182" y="0.0" width="172" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Attach Image">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="attachImage:" destination="Az1-5a-teq" eventType="touchUpInside" id="2Bf-Ft-yKa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YdE-Lp-9b2">
+                                        <rect key="frame" x="0.0" y="60" width="354" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxg-Hq-cOH">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="5Ig-kC-AT8"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Voice Note">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="voiceNoteBtnAction:" destination="Az1-5a-teq" eventType="touchUpInside" id="8RA-Ns-oxk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPh-sV-L7c">
+                                                <rect key="frame" x="182" y="0.0" width="172" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Save">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="saveBtnClicked:" destination="Az1-5a-teq" eventType="touchUpInside" id="7py-VD-CzV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1jo-Ij-cu2" secondAttribute="trailing" id="JgD-8d-x1H"/>
+                                    <constraint firstItem="1jo-Ij-cu2" firstAttribute="leading" secondItem="8CA-iO-CNH" secondAttribute="leading" id="LvM-Xg-qWJ"/>
+                                    <constraint firstItem="1jo-Ij-cu2" firstAttribute="top" secondItem="8CA-iO-CNH" secondAttribute="top" id="O6N-Xv-hQc"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1gD-pi-wjF"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0PK-L9-FsD" firstAttribute="trailing" secondItem="lL4-0d-Xzq" secondAttribute="trailing" id="3BM-lT-3LE"/>
-                            <constraint firstItem="fPh-sV-L7c" firstAttribute="top" secondItem="gRG-2z-mPE" secondAttribute="bottom" constant="21" id="CD5-Ad-46g"/>
                             <constraint firstItem="lL4-0d-Xzq" firstAttribute="leading" secondItem="P1T-MH-Ofz" secondAttribute="leading" id="F2K-Jv-CzC"/>
-                            <constraint firstItem="gRG-2z-mPE" firstAttribute="leading" secondItem="ZdR-uR-lZh" secondAttribute="trailing" constant="25" id="F5U-B4-n5o"/>
+                            <constraint firstItem="8CA-iO-CNH" firstAttribute="top" secondItem="0PK-L9-FsD" secondAttribute="bottom" constant="58" id="F5s-0T-ZkD"/>
                             <constraint firstItem="lL4-0d-Xzq" firstAttribute="top" secondItem="P1T-MH-Ofz" secondAttribute="bottom" constant="25" id="Gue-kg-rSA"/>
-                            <constraint firstItem="ZdR-uR-lZh" firstAttribute="leading" secondItem="fPh-sV-L7c" secondAttribute="leading" id="HPQ-AF-gCV"/>
+                            <constraint firstItem="1gD-pi-wjF" firstAttribute="trailing" secondItem="8CA-iO-CNH" secondAttribute="trailing" constant="30" id="Hsb-FS-GzA"/>
                             <constraint firstItem="0PK-L9-FsD" firstAttribute="leading" secondItem="1gD-pi-wjF" secondAttribute="leading" constant="30" id="QmG-3Z-d8O"/>
-                            <constraint firstItem="gRG-2z-mPE" firstAttribute="top" secondItem="ZdR-uR-lZh" secondAttribute="top" id="UBS-vV-fDi"/>
                             <constraint firstItem="lL4-0d-Xzq" firstAttribute="height" secondItem="lv3-SW-wXH" secondAttribute="height" multiplier="0.41183" id="Whm-b9-aLT"/>
-                            <constraint firstItem="gRG-2z-mPE" firstAttribute="trailing" secondItem="fPh-sV-L7c" secondAttribute="trailing" id="YMq-by-wWo"/>
-                            <constraint firstItem="fPh-sV-L7c" firstAttribute="trailing" secondItem="lL4-0d-Xzq" secondAttribute="trailing" id="Ynd-kz-ZLR"/>
-                            <constraint firstItem="fPh-sV-L7c" firstAttribute="leading" secondItem="lL4-0d-Xzq" secondAttribute="leading" id="ZTd-aQ-1b5"/>
                             <constraint firstItem="1gD-pi-wjF" firstAttribute="trailing" secondItem="0PK-L9-FsD" secondAttribute="trailing" constant="30" id="ahq-F4-vpZ"/>
-                            <constraint firstItem="1gD-pi-wjF" firstAttribute="bottom" secondItem="fPh-sV-L7c" secondAttribute="bottom" constant="10" id="eMB-Tc-nOU"/>
                             <constraint firstItem="0PK-L9-FsD" firstAttribute="leading" secondItem="lL4-0d-Xzq" secondAttribute="leading" id="hOS-9h-lMG"/>
                             <constraint firstItem="lL4-0d-Xzq" firstAttribute="trailing" secondItem="P1T-MH-Ofz" secondAttribute="trailing" id="hn9-Z9-xNI"/>
-                            <constraint firstItem="gRG-2z-mPE" firstAttribute="width" secondItem="ZdR-uR-lZh" secondAttribute="width" id="kS3-j4-yAP"/>
-                            <constraint firstItem="gRG-2z-mPE" firstAttribute="height" secondItem="ZdR-uR-lZh" secondAttribute="height" id="qI5-Gy-k6r"/>
                             <constraint firstItem="P1T-MH-Ofz" firstAttribute="leading" secondItem="1gD-pi-wjF" secondAttribute="leading" constant="30" id="qyV-Fd-OTw"/>
-                            <constraint firstItem="ZdR-uR-lZh" firstAttribute="top" secondItem="0PK-L9-FsD" secondAttribute="bottom" constant="39" id="r3h-rw-Bia"/>
+                            <constraint firstItem="8CA-iO-CNH" firstAttribute="bottom" secondItem="1gD-pi-wjF" secondAttribute="bottom" id="tYG-q5-clB"/>
                             <constraint firstItem="1gD-pi-wjF" firstAttribute="trailing" secondItem="P1T-MH-Ofz" secondAttribute="trailing" constant="30" id="vas-5N-kMc"/>
                             <constraint firstItem="0PK-L9-FsD" firstAttribute="top" secondItem="lL4-0d-Xzq" secondAttribute="bottom" constant="29" id="wCn-3w-PJq"/>
+                            <constraint firstItem="8CA-iO-CNH" firstAttribute="leading" secondItem="1gD-pi-wjF" secondAttribute="leading" constant="30" id="wIA-Ju-jD3"/>
                             <constraint firstItem="P1T-MH-Ofz" firstAttribute="top" secondItem="1gD-pi-wjF" secondAttribute="top" constant="25" id="wTC-qn-NTn"/>
-                            <constraint firstItem="fPh-sV-L7c" firstAttribute="height" secondItem="ZdR-uR-lZh" secondAttribute="height" id="zKn-vG-IF1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="SaveBtn" destination="fPh-sV-L7c" id="Sv7-dV-ekN"/>
+                        <outlet property="attachImgBtn" destination="gRG-2z-mPE" id="i4i-TV-0Hd"/>
                         <outlet property="collectionView" destination="0PK-L9-FsD" id="CXz-m9-vuk"/>
+                        <outlet property="markCompleteBtn" destination="ZdR-uR-lZh" id="kcK-h1-KrZ"/>
                         <outlet property="notesDetailedView" destination="lL4-0d-Xzq" id="7E7-Ob-S1t"/>
                         <outlet property="titleNameField" destination="P1T-MH-Ofz" id="tZc-a3-72b"/>
+                        <outlet property="voiceNoteBtn" destination="uxg-Hq-cOH" id="dad-8q-YUB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXL-Rd-PiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="126.08695652173914" y="407.14285714285711"/>
+        </scene>
+        <!--Poppver Controller-->
+        <scene sceneID="5SA-Pf-XOq">
+            <objects>
+                <viewController storyboardIdentifier="PoppverController" id="WhT-tJ-Vjf" customClass="PoppverController" customModule="task_RapidChidori_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mL8-xR-FQW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NLB-CP-avD">
+                                <rect key="frame" x="41.5" y="179" width="331" height="538"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MrJ-5e-v7A"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="NLB-CP-avD" firstAttribute="height" secondItem="mL8-xR-FQW" secondAttribute="height" multiplier="0.6" id="7Af-g9-pap"/>
+                            <constraint firstItem="NLB-CP-avD" firstAttribute="width" secondItem="mL8-xR-FQW" secondAttribute="width" multiplier="0.8" id="To0-YJ-odE"/>
+                            <constraint firstItem="NLB-CP-avD" firstAttribute="centerY" secondItem="mL8-xR-FQW" secondAttribute="centerY" id="fwD-9h-6p8"/>
+                            <constraint firstItem="NLB-CP-avD" firstAttribute="centerX" secondItem="mL8-xR-FQW" secondAttribute="centerX" id="gTY-ZD-45V"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="M31-Ym-0y8" appends="YES" id="h1x-Ux-R1g"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="NLB-CP-avD" id="cgs-Zo-Xud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ktT-Pp-MeK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="M31-Ym-0y8">
+                    <connections>
+                        <action selector="tapoutside:" destination="WhT-tJ-Vjf" id="VVU-Dz-WJg"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="776" y="581"/>
         </scene>
     </scenes>
     <resources>
