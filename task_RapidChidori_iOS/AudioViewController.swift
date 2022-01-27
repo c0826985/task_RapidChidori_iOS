@@ -23,6 +23,21 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     var player : AVAudioPlayer!
     var recordSession : AVAudioSession!
     
+    @IBAction func PlayRecordedAudio(_ sender: Any) {
+//
+//        if sender.titleLabel?.text == "Play" {
+//                  recordBtn.isEnabled = false
+//                  sender.setTitle("Stop", for: .normal)
+//                  preparePlayer()
+//                  audioPlayer.play()
+//              }
+//              else{
+//                  audioPlayer.stop()
+//                  sender.setTitle("Play", for: .normal)
+//              }
+//
+
+    }
     
     @IBAction func record(_ sender: UIButton) {
         
@@ -102,7 +117,20 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     }
     
 }
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+           // playBtn.isEnabled = true
+        }
+        
+        func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+           // recordBtn.isEnabled = true
+           // playBtn.setTitle("Play", for: .normal)
+        }
     
+//    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+//            recordBtn.isEnabled = true
+//            playBtn.setTitle("Play", for: .normal)
+//        }
+//
 }
 
 
