@@ -12,8 +12,8 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.startSession()
+        play.isEnabled = false
     }
     
    
@@ -23,37 +23,45 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     var player : AVAudioPlayer!
     var recordSession : AVAudioSession!
     
-    @IBAction func PlayRecordedAudio(_ sender: Any) {
-//
-//        if sender.titleLabel?.text == "Play" {
-//                  recordBtn.isEnabled = false
-//                  sender.setTitle("Stop", for: .normal)
-//                  preparePlayer()
-//                  audioPlayer.play()
-//              }
-//              else{
-//                  audioPlayer.stop()
-//                  sender.setTitle("Play", for: .normal)
-//              }
-//
-
-    }
+    @IBOutlet weak var recordBtn: UIButton!
+    
+  
+    @IBOutlet weak var play: UIButton!
     
     @IBAction func record(_ sender: UIButton) {
         
             if sender.titleLabel?.text == "Record"{
                 recorder.record()
                 sender.setTitle("Stop", for: .normal)
-                //playBtn.isEnabled = false
+                play.isEnabled = false
             }
             else{
                 recorder.stop()
                 sender.setTitle("Record", for: .normal)
-                //playBtn.isEnabled = false
+                play.isEnabled = false
             }
         
     }
     
+    
+   
+    
+    @IBAction func PlayRecordedAudio(_ sender: UIButton) {
+    
+    if sender.titleLabel?.text == "Play" {
+                  recordBtn.isEnabled = false
+                  sender.setTitle("Stop", for: .normal)
+                  preparePlayer()
+                  player.play()
+              }
+               else{
+                  player.stop()
+                  sender.setTitle("Play", for: .normal)
+               }
+    }
+    
+    
+
     func getCacheDirectory() -> URL {
         let fm = FileManager.default
         let docsurl = try! fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
@@ -67,11 +75,9 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     }
     
     
-    
     func preparePlayer(){
         do {
             player =  try AVAudioPlayer(contentsOf: getFileURL())
-            
             player.delegate = self
             player.prepareToPlay()
             player.volume = 1.0
@@ -110,7 +116,7 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         recorder = try AVAudioRecorder(url: getFileURL(), settings: recordSettings)
         recorder.delegate = self
         recorder.prepareToRecord()
-        //playBtn.isEnabled = false
+        play.isEnabled = false
     }
     catch {
         print("\(error)")
@@ -118,19 +124,16 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     
 }
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-           // playBtn.isEnabled = true
+            play.isEnabled = true
         }
         
         func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-           // recordBtn.isEnabled = true
-           // playBtn.setTitle("Play", for: .normal)
+            recordBtn.isEnabled = true
+            play.setTitle("Play", for: .normal)
         }
     
-//    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-//            recordBtn.isEnabled = true
-//            playBtn.setTitle("Play", for: .normal)
-//        }
-//
+
+
 }
 
 

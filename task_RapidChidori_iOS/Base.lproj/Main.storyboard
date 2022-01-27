@@ -246,19 +246,16 @@
         <!--Audio View Controller-->
         <scene sceneID="4JE-b4-PvS">
             <objects>
-                <viewController id="WOz-5V-EUz" customClass="AudioViewController" sceneMemberID="viewController">
+                <viewController id="WOz-5V-EUz" customClass="AudioViewController" customModule="task_RapidChidori_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wP8-gt-YZ0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mbq-HO-Mh7">
-                                <rect key="frame" x="166" y="103" width="82.5" height="35"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mbq-HO-Mh7">
+                                <rect key="frame" x="166" y="103" width="82.5" height="0.0"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbg-OZ-fUf">
-                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="bbg-OZ-fUf" secondAttribute="height" multiplier="82:35" id="iz9-dA-gXI"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbg-OZ-fUf">
+                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -275,14 +272,11 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wlL-cv-v4b">
-                                <rect key="frame" x="166" y="404" width="76" height="32.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JKk-6R-XvV">
+                                <rect key="frame" x="189" y="348" width="36" height="67.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJm-5L-3eg">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="32.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="iJm-5L-3eg" secondAttribute="height" multiplier="82:35" id="15b-VF-zS5"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JIm-S5-69F">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="67.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button">
                                             <attributedString key="attributedTitle">
@@ -294,9 +288,18 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Play">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
                                         <connections>
-                                            <action selector="PlayRecordedAudio:" destination="WOz-5V-EUz" eventType="touchUpInside" id="neT-Zk-NM9"/>
-                                            <action selector="record:" destination="WOz-5V-EUz" eventType="touchUpInside" id="dGk-Ox-4nf"/>
+                                            <action selector="PlayRecordedAudio:" destination="WOz-5V-EUz" eventType="touchUpInside" id="lNM-AF-Uq4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -305,13 +308,21 @@
                         <viewLayoutGuide key="safeArea" id="vRW-WN-lbz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vRW-WN-lbz" firstAttribute="trailing" secondItem="Mbq-HO-Mh7" secondAttribute="trailing" constant="165.5" id="A0i-UL-KOc"/>
-                            <constraint firstItem="Mbq-HO-Mh7" firstAttribute="leading" secondItem="vRW-WN-lbz" secondAttribute="leading" constant="166" id="QEK-vz-fl5"/>
-                            <constraint firstItem="Mbq-HO-Mh7" firstAttribute="top" secondItem="vRW-WN-lbz" secondAttribute="top" constant="103" id="ebG-yC-Pnn"/>
-                            <constraint firstItem="vRW-WN-lbz" firstAttribute="bottom" secondItem="Mbq-HO-Mh7" secondAttribute="bottom" constant="670" id="guU-Cd-TMU"/>
+                            <constraint firstItem="JKk-6R-XvV" firstAttribute="leading" secondItem="vRW-WN-lbz" secondAttribute="leading" constant="189" id="BYg-34-HVd"/>
+                            <constraint firstItem="vRW-WN-lbz" firstAttribute="trailing" secondItem="JKk-6R-XvV" secondAttribute="trailing" constant="189" id="FXA-RB-SBr"/>
+                            <constraint firstItem="JKk-6R-XvV" firstAttribute="top" secondItem="Mbq-HO-Mh7" secondAttribute="bottom" constant="215" id="NM4-8m-FWC"/>
+                            <constraint firstItem="vRW-WN-lbz" firstAttribute="bottom" secondItem="JKk-6R-XvV" secondAttribute="bottom" constant="427.5" id="RvV-S8-hga"/>
+                            <constraint firstItem="vRW-WN-lbz" firstAttribute="trailing" secondItem="Mbq-HO-Mh7" secondAttribute="trailing" constant="165.5" id="VVU-vp-N92"/>
+                            <constraint firstItem="Mbq-HO-Mh7" firstAttribute="top" secondItem="vRW-WN-lbz" secondAttribute="top" constant="103" id="XCQ-rh-e9C"/>
+                            <constraint firstItem="Mbq-HO-Mh7" firstAttribute="leading" secondItem="vRW-WN-lbz" secondAttribute="leading" constant="166" id="enl-iF-NSF"/>
+                            <constraint firstItem="JKk-6R-XvV" firstAttribute="top" secondItem="Mbq-HO-Mh7" secondAttribute="bottom" constant="210" id="kVV-OW-4IT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ktI-BP-rpN"/>
+                    <connections>
+                        <outlet property="play" destination="JIm-S5-69F" id="P7h-pO-Emo"/>
+                        <outlet property="recordBtn" destination="bbg-OZ-fUf" id="70J-la-Ijg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLc-z8-H6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
