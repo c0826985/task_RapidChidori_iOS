@@ -186,7 +186,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="voiceNoteBtnAction:" destination="Az1-5a-teq" eventType="touchUpInside" id="8RA-Ns-oxk"/>
+                                                    <segue destination="WOz-5V-EUz" kind="show" id="mDD-cd-UCU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPh-sV-L7c">
@@ -237,12 +237,59 @@
                         <outlet property="markCompleteBtn" destination="ZdR-uR-lZh" id="kcK-h1-KrZ"/>
                         <outlet property="notesDetailedView" destination="lL4-0d-Xzq" id="7E7-Ob-S1t"/>
                         <outlet property="titleNameField" destination="P1T-MH-Ofz" id="tZc-a3-72b"/>
-                        <outlet property="voiceNoteBtn" destination="uxg-Hq-cOH" id="dad-8q-YUB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXL-Rd-PiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="126.08695652173914" y="407.14285714285711"/>
+        </scene>
+        <!--Audio View Controller-->
+        <scene sceneID="4JE-b4-PvS">
+            <objects>
+                <viewController id="WOz-5V-EUz" customClass="AudioViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wP8-gt-YZ0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mbq-HO-Mh7">
+                                <rect key="frame" x="166" y="103" width="82.5" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbg-OZ-fUf">
+                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bbg-OZ-fUf" secondAttribute="height" multiplier="82:35" id="iz9-dA-gXI"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Record">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="record:" destination="WOz-5V-EUz" eventType="touchUpInside" id="Fcg-rh-Dzj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vRW-WN-lbz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vRW-WN-lbz" firstAttribute="trailing" secondItem="Mbq-HO-Mh7" secondAttribute="trailing" constant="165.5" id="A0i-UL-KOc"/>
+                            <constraint firstItem="Mbq-HO-Mh7" firstAttribute="leading" secondItem="vRW-WN-lbz" secondAttribute="leading" constant="166" id="QEK-vz-fl5"/>
+                            <constraint firstItem="Mbq-HO-Mh7" firstAttribute="top" secondItem="vRW-WN-lbz" secondAttribute="top" constant="103" id="ebG-yC-Pnn"/>
+                            <constraint firstItem="vRW-WN-lbz" firstAttribute="bottom" secondItem="Mbq-HO-Mh7" secondAttribute="bottom" constant="670" id="guU-Cd-TMU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ktI-BP-rpN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLc-z8-H6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126.08695652173914" y="1183.2589285714284"/>
         </scene>
         <!--Poppver Controller-->
         <scene sceneID="5SA-Pf-XOq">

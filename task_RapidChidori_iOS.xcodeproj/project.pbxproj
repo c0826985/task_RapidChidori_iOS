@@ -31,6 +31,7 @@
 		C8396C132790E9050050A5FF /* task_RapidChidori_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396C122790E9050050A5FF /* task_RapidChidori_iOSTests.swift */; };
 		C8396C1D2790E9050050A5FF /* task_RapidChidori_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396C1C2790E9050050A5FF /* task_RapidChidori_iOSUITests.swift */; };
 		C8396C1F2790E9050050A5FF /* task_RapidChidori_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396C1E2790E9050050A5FF /* task_RapidChidori_iOSUITestsLaunchTests.swift */; };
+		C87EAF8427A2145500723520 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87EAF8327A2145500723520 /* AudioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		C8396C182790E9050050A5FF /* task_RapidChidori_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = task_RapidChidori_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8396C1C2790E9050050A5FF /* task_RapidChidori_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task_RapidChidori_iOSUITests.swift; sourceTree = "<group>"; };
 		C8396C1E2790E9050050A5FF /* task_RapidChidori_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task_RapidChidori_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C87EAF8327A2145500723520 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				8C530C9D279DD334000B3E09 /* ImageCollectionViewCell.swift */,
 				8C530C9E279DD334000B3E09 /* ImageCollectionViewCell.xib */,
 				8C75553427A1543A0085156A /* PoppverController.swift */,
+				C87EAF8327A2145500723520 /* AudioViewController.swift */,
 			);
 			path = task_RapidChidori_iOS;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				8C75553527A1543A0085156A /* PoppverController.swift in Sources */,
 				8C530C9F279DD334000B3E09 /* ImageCollectionViewCell.swift in Sources */,
 				8C530C802799CA90000B3E09 /* NibLoading.swift in Sources */,
+				C87EAF8427A2145500723520 /* AudioViewController.swift in Sources */,
 				C8396BFC2790E9030050A5FF /* AppDelegate.swift in Sources */,
 				8C530C842799D509000B3E09 /* NotesViewController.swift in Sources */,
 				C8396BFE2790E9030050A5FF /* SceneDelegate.swift in Sources */,

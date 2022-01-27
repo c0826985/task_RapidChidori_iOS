@@ -92,6 +92,10 @@ class NotesViewController: UIViewController {
     //to handle the add voice note button click
     @IBAction func voiceNoteBtnAction(_ sender: Any) {
         
+        
+        
+        
+        
     }
     
     
@@ -140,11 +144,7 @@ class NotesViewController: UIViewController {
     }
     
     
-    
-    @IBAction func addRecording(_ sender: UIButton) {
-        
-        
-    }
+
     
     //to show alert on mark complete button click
     func showAlert(message: String) {
