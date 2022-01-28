@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
 
@@ -17,7 +18,13 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     }
     
    
-    var fileName = "audio_file.m4a"
+    var fileName : String!
+    var counter = 0
+    var finalTitle : String!
+    var savedNote:Note?
+    var finalNotes : String!
+    var delegate:NotesViewProtocol?
+    var sounds = [Audio]()
     
     var recorder : AVAudioRecorder!
     var player : AVAudioPlayer!
@@ -42,9 +49,6 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
             }
         
     }
-    
-    
-   
     
     @IBAction func PlayRecordedAudio(_ sender: UIButton) {
     
@@ -71,6 +75,7 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     func getFileURL() -> URL{
         let path  = getCacheDirectory()
         let filePath = path.appendingPathComponent("\(fileName)")
+        print(filePath)
         return filePath
     }
     
@@ -132,10 +137,54 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
             play.setTitle("Play", for: .normal)
         }
     
-
-
+    
+    @IBAction func save(_ sender: Any) {
+        counter += 1
+        //if let title = finalTitle, title.isEmpty {
+          //  showAlert(message: "Please Go back and enter a Task Title")
+        //}
+        
+       // else if let detail = finalNotes, detail.isEmpty {
+           // showAlert(message: "Please Go back and enter a Task Description")
+   // }
+        //else{
+            
+          //  if let note = savedNote {
+               // do {
+                  //  let myNotes = try PersistentStorage.shared.context.fetch(Note.fetchRequest())
+                   // guard let editedNote = myNotes.first(where: {$0.objectID == note.objectID}) else{return}
+                    //editedNote.title = finalTitle
+                    //editedNote.detail = finalNotes
+                   // editedNote.sounds = Set(sounds) as NSSet
+                  fileName = "audio_file" + String(counter) + ".m4a"
+             //   } catch let error {
+                 //   print(error)
+              //  }
+     //   }   else{
+       //     let note = Note(context: PersistentStorage.shared.context)
+            //note.title = finalTitle
+            //note.detail = finalNotes
+           // note.sounds = Set(sounds) as NSSet
+            //note.date = Date()
+       // }
+         //   PersistentStorage.shared.saveContext()
+        //    self.dismiss(animated: true, completion: nil)
+         //   delegate?.didSaveNote()
+         //   fileName = "audio_file" + String(counter) + "m4a"
+      //  performSegue(withIdentifier: "saveAudio", sender: self)
 }
 
+  //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     //   let vc = segue.destination as! NotesViewController
+          //  vc.audioFile = fileName
+      //  vc.= self.finalTitle
+      //  vc.= self.finalNotes
+    //}
 
-
+   // func showAlert(message: String) {
+      //  let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+      //  alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+      //  self.present(alert, animated: true, completion: nil)
+    //}
+}
 

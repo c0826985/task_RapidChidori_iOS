@@ -15,7 +15,6 @@ protocol NotesViewProtocol {
 
 //this controller is for the second screen i.e. the screen where note data is filled
 class NotesViewController: UIViewController {
-    @IBOutlet weak var voiceNoteBtn: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     var delegate:NotesViewProtocol?
     @IBOutlet weak var attachImgBtn: UIButton!
@@ -26,10 +25,13 @@ class NotesViewController: UIViewController {
     var imagePicker = UIImagePickerController()
     var savedNote:Note?
     var images = [Image]()
+    var sounds = [Audio]()
     let rows = 1
     let columnsInPage = 3
     var itemsInPage: Int { return columnsInPage*rows }
-
+    var titleName:String!
+    var noteDetails:String!
+    var audioFile:String!
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -52,7 +54,7 @@ class NotesViewController: UIViewController {
             markCompleteBtn.isEnabled = false
             return
         }
-        voiceNoteBtn.isEnabled = !note.status
+        //voiceNoteBtn.isEnabled = !note.status
         markCompleteBtn.isEnabled = !note.status
         SaveBtn.isEnabled = !note.status
         attachImgBtn.isEnabled = !note.status
@@ -90,13 +92,10 @@ class NotesViewController: UIViewController {
     }
     
     //to handle the add voice note button click
-    @IBAction func voiceNoteBtnAction(_ sender: Any) {
-        
-        
-        
-        
-        
-    }
+   // @IBAction func voiceNoteBtnAction(_ sender: Any) {
+     //
+    
+   // }
     
     
     //to handle the attach image button click
@@ -111,6 +110,21 @@ class NotesViewController: UIViewController {
             present(imagePicker, animated: true, completion: nil)
         }
     }
+    
+    
+    @IBAction func voice(_ sender: Any) {
+        //self.titleName = titleNameField.text
+        //self.noteDetails = notesDetailedView.text
+        performSegue(withIdentifier: "pass", sender: self)
+    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var vc = segue.destination as! AudioViewController
+        vc.finalTitle = self.titleNameField.text
+        vc.finalNotes = self.notesDetailedView.text
+    }
+    
     
     //to handle the save note button click
     @IBAction func saveBtnClicked(_ sender: Any) {
@@ -127,6 +141,7 @@ class NotesViewController: UIViewController {
                     editedNote.title = titleNameField.text
                     editedNote.detail = notesDetailedView.text
                     editedNote.images = Set(images) as NSSet
+                    editedNote.sounds = Set(sounds) as NSSet
                 } catch let error {
                     print(error)
                 }
@@ -135,6 +150,7 @@ class NotesViewController: UIViewController {
                 note.title = titleNameField.text
                 note.detail = notesDetailedView.text
                 note.images = Set(images) as NSSet
+                note.sounds = Set(sounds) as NSSet
                 note.date = Date()
             }
             PersistentStorage.shared.saveContext()
@@ -217,6 +233,8 @@ extension NotesViewController: UICollectionViewDataSource, UICollectionViewDeleg
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let image = images[indexPath.row]
         if let imageData = image.noteImage, let popupViewController = self.storyboard?.instantiateViewController(withIdentifier: "PoppverController") as? PoppverController {
@@ -225,4 +243,7 @@ extension NotesViewController: UICollectionViewDataSource, UICollectionViewDeleg
             present(popupViewController, animated: true, completion:nil)
         }
     }
+    
+        
+    
 }
