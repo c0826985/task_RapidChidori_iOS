@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3809A6E027A1CF5800AE9867 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809A6DC27A1CF5800AE9867 /* Image+CoreDataClass.swift */; };
-		3809A6E127A1CF5800AE9867 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809A6DD27A1CF5800AE9867 /* Image+CoreDataProperties.swift */; };
+		3898991827A480E300B7D3B0 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3898991427A480E300B7D3B0 /* Image+CoreDataClass.swift */; };
+		3898991927A480E300B7D3B0 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3898991527A480E300B7D3B0 /* Image+CoreDataProperties.swift */; };
+		3898991A27A480E300B7D3B0 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3898991627A480E300B7D3B0 /* Note+CoreDataClass.swift */; };
+		3898991B27A480E300B7D3B0 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3898991727A480E300B7D3B0 /* Note+CoreDataProperties.swift */; };
 		8C530C782799BE71000B3E09 /* MyNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C762799BE71000B3E09 /* MyNotesTableViewCell.swift */; };
 		8C530C792799BE71000B3E09 /* MyNotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C530C772799BE71000B3E09 /* MyNotesTableViewCell.xib */; };
 		8C530C802799CA90000B3E09 /* NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C530C7F2799CA90000B3E09 /* NibLoading.swift */; };
@@ -30,10 +32,6 @@
 		C8396C1D2790E9050050A5FF /* task_RapidChidori_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396C1C2790E9050050A5FF /* task_RapidChidori_iOSUITests.swift */; };
 		C8396C1F2790E9050050A5FF /* task_RapidChidori_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8396C1E2790E9050050A5FF /* task_RapidChidori_iOSUITestsLaunchTests.swift */; };
 		C87EAF8427A2145500723520 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87EAF8327A2145500723520 /* AudioViewController.swift */; };
-		C8F3724727A38CC200920EB8 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F3724327A38CC200920EB8 /* Note+CoreDataClass.swift */; };
-		C8F3724827A38CC200920EB8 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F3724427A38CC200920EB8 /* Note+CoreDataProperties.swift */; };
-		C8F3724927A38CC200920EB8 /* Audio+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F3724527A38CC200920EB8 /* Audio+CoreDataClass.swift */; };
-		C8F3724A27A38CC200920EB8 /* Audio+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F3724627A38CC200920EB8 /* Audio+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3809A6DC27A1CF5800AE9867 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3809A6DD27A1CF5800AE9867 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3898991427A480E300B7D3B0 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3898991527A480E300B7D3B0 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3898991627A480E300B7D3B0 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3898991727A480E300B7D3B0 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8C530C762799BE71000B3E09 /* MyNotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotesTableViewCell.swift; sourceTree = "<group>"; };
 		8C530C772799BE71000B3E09 /* MyNotesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyNotesTableViewCell.xib; sourceTree = "<group>"; };
 		8C530C7F2799CA90000B3E09 /* NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoading.swift; sourceTree = "<group>"; };
@@ -81,10 +81,6 @@
 		C8396C1C2790E9050050A5FF /* task_RapidChidori_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task_RapidChidori_iOSUITests.swift; sourceTree = "<group>"; };
 		C8396C1E2790E9050050A5FF /* task_RapidChidori_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task_RapidChidori_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C87EAF8327A2145500723520 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
-		C8F3724327A38CC200920EB8 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C8F3724427A38CC200920EB8 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C8F3724527A38CC200920EB8 /* Audio+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C8F3724627A38CC200920EB8 /* Audio+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +120,10 @@
 		C8396BEF2790E9030050A5FF = {
 			isa = PBXGroup;
 			children = (
-				C8F3724327A38CC200920EB8 /* Note+CoreDataClass.swift */,
-				C8F3724427A38CC200920EB8 /* Note+CoreDataProperties.swift */,
-				C8F3724527A38CC200920EB8 /* Audio+CoreDataClass.swift */,
-				C8F3724627A38CC200920EB8 /* Audio+CoreDataProperties.swift */,
-				3809A6DC27A1CF5800AE9867 /* Image+CoreDataClass.swift */,
-				3809A6DD27A1CF5800AE9867 /* Image+CoreDataProperties.swift */,
+				3898991427A480E300B7D3B0 /* Image+CoreDataClass.swift */,
+				3898991527A480E300B7D3B0 /* Image+CoreDataProperties.swift */,
+				3898991627A480E300B7D3B0 /* Note+CoreDataClass.swift */,
+				3898991727A480E300B7D3B0 /* Note+CoreDataProperties.swift */,
 				C8396BFA2790E9030050A5FF /* task_RapidChidori_iOS */,
 				C8396C112790E9050050A5FF /* task_RapidChidori_iOSTests */,
 				C8396C1B2790E9050050A5FF /* task_RapidChidori_iOSUITests */,
@@ -326,21 +320,19 @@
 				8C530C8D279D5AAD000B3E09 /* task_RapidChidori_iOS.xcdatamodeld in Sources */,
 				C8396C002790E9030050A5FF /* LandingViewController.swift in Sources */,
 				8C75553527A1543A0085156A /* PoppverController.swift in Sources */,
-				C8F3724927A38CC200920EB8 /* Audio+CoreDataClass.swift in Sources */,
 				8C530C9F279DD334000B3E09 /* ImageCollectionViewCell.swift in Sources */,
 				8C530C802799CA90000B3E09 /* NibLoading.swift in Sources */,
 				C87EAF8427A2145500723520 /* AudioViewController.swift in Sources */,
 				C8396BFC2790E9030050A5FF /* AppDelegate.swift in Sources */,
-				C8F3724A27A38CC200920EB8 /* Audio+CoreDataProperties.swift in Sources */,
 				8C530C842799D509000B3E09 /* NotesViewController.swift in Sources */,
 				C8396BFE2790E9030050A5FF /* SceneDelegate.swift in Sources */,
-				C8F3724827A38CC200920EB8 /* Note+CoreDataProperties.swift in Sources */,
+				3898991B27A480E300B7D3B0 /* Note+CoreDataProperties.swift in Sources */,
 				8C530C782799BE71000B3E09 /* MyNotesTableViewCell.swift in Sources */,
-				3809A6E127A1CF5800AE9867 /* Image+CoreDataProperties.swift in Sources */,
-				3809A6E027A1CF5800AE9867 /* Image+CoreDataClass.swift in Sources */,
-				C8F3724727A38CC200920EB8 /* Note+CoreDataClass.swift in Sources */,
 				8C530C822799CC55000B3E09 /* NotesModel.swift in Sources */,
+				3898991827A480E300B7D3B0 /* Image+CoreDataClass.swift in Sources */,
+				3898991A27A480E300B7D3B0 /* Note+CoreDataClass.swift in Sources */,
 				8C530C95279D617C000B3E09 /* PersistentStorage.swift in Sources */,
+				3898991927A480E300B7D3B0 /* Image+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
