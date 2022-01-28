@@ -41,6 +41,7 @@ class NotesViewController: UIViewController {
     
     //setup intial UI
     func setUI() {
+        titleNameField.delegate = self
         notesDetailedView.text = "Task Description"
         notesDetailedView.textColor = UIColor.lightGray
         collectionView?.register(ImageCollectionViewCell.nib, forCellWithReuseIdentifier: ImageCollectionViewCell.reuseIdentifier)
@@ -119,6 +120,7 @@ class NotesViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? AudioViewController {
+            
             vc.delegate = self
         }
     }
@@ -167,7 +169,7 @@ class NotesViewController: UIViewController {
     }
 }
 
-extension NotesViewController: UITextViewDelegate {
+extension NotesViewController: UITextViewDelegate, UITextFieldDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
             textView.text = nil
@@ -180,6 +182,18 @@ extension NotesViewController: UITextViewDelegate {
             textView.text = "Task Description"
             textView.textColor = UIColor.lightGray
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        true
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+                    textView.resignFirstResponder()
+                    return true
+                }
+                return true
     }
 }
 

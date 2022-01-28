@@ -19,12 +19,17 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     var hasAudioSaved = false
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         hasAudioSaved = UIApplication.shared.canOpenURL(getFileURL())
         self.startSession()
         play.isEnabled = hasAudioSaved
     }
-    
-    
+
     var fileName  = "myRecording.m4a"
     var counter = 0
     
@@ -145,6 +150,7 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         do {
             let audioData = try Data(contentsOf: getFileURL())
             self.delegate?.didSaveMyAudioInNote(audio: audioData)
+            self.dismiss(animated: true, completion: nil)
         } catch {
             print("Unable to load data: \(error)")
         }
