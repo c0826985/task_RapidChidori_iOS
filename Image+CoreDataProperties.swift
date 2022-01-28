@@ -1,8 +1,8 @@
 //
 //  Image+CoreDataProperties.swift
-//  Image
+//  task_RapidChidori_iOS
 //
-//  Created by Shubham Behal on 26/01/22.
+//  Created by Rohit Sharma on 28/01/22.
 //
 //
 

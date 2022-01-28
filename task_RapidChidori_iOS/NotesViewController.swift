@@ -25,13 +25,14 @@ class NotesViewController: UIViewController {
     var imagePicker = UIImagePickerController()
     var savedNote:Note?
     var images = [Image]()
-    var sounds = [Audio]()
     let rows = 1
     let columnsInPage = 3
     var itemsInPage: Int { return columnsInPage*rows }
     var titleName:String!
     var noteDetails:String!
     var audioFile:String!
+    var voiceData: Data?
+    var hasVoiceNote = false
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -112,16 +113,14 @@ class NotesViewController: UIViewController {
     
     
     @IBAction func voice(_ sender: Any) {
-        //self.titleName = titleNameField.text
-        //self.noteDetails = notesDetailedView.text
         performSegue(withIdentifier: "pass", sender: self)
     
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var vc = segue.destination as! AudioViewController
-        vc.finalTitle = self.titleNameField.text
-        vc.finalNotes = self.notesDetailedView.text
+        if let vc = segue.destination as? AudioViewController {
+            vc.delegate = self
+        }
     }
     
     
@@ -132,7 +131,6 @@ class NotesViewController: UIViewController {
         } else if let detail = notesDetailedView.text, detail.isEmpty {
             showAlert(message: "Please Enter Task Description")
         } else {
-            
             if let note = savedNote {
                 do {
                     let myNotes = try PersistentStorage.shared.context.fetch(Note.fetchRequest())
@@ -140,7 +138,7 @@ class NotesViewController: UIViewController {
                     editedNote.title = titleNameField.text
                     editedNote.detail = notesDetailedView.text
                     editedNote.images = Set(images) as NSSet
-                    editedNote.sounds = Set(sounds) as NSSet
+                    editedNote.audio = voiceData
                 } catch let error {
                     print(error)
                 }
@@ -149,7 +147,7 @@ class NotesViewController: UIViewController {
                 note.title = titleNameField.text
                 note.detail = notesDetailedView.text
                 note.images = Set(images) as NSSet
-                note.sounds = Set(sounds) as NSSet
+                note.audio = voiceData
                 note.date = Date()
             }
             PersistentStorage.shared.saveContext()
@@ -242,7 +240,10 @@ extension NotesViewController: UICollectionViewDataSource, UICollectionViewDeleg
             present(popupViewController, animated: true, completion:nil)
         }
     }
-    
-        
-    
+}
+
+extension NotesViewController: AudioViewControllerProtocol {
+    func didSaveMyAudioInNote(audio: Data?) {
+        voiceData = audio
+    }
 }
