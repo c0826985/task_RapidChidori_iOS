@@ -24,7 +24,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="u4w-LI-LTH"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" barStyle="blackTranslucent" placeholder="Search Tasks" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOG-Xn-umF">
+                            <searchBar contentMode="redraw" placeholder="Search Tasks" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOG-Xn-umF">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7Y8-kc-ihm"/>
