@@ -33,8 +33,16 @@ class NotesViewController: UIViewController {
     var audioFile:String!
     var voiceData: Data?
     var hasVoiceNote = false
+    @IBOutlet weak var dueDateField: UITextField!
+    private var datePicker : UIDatePicker?
     override func viewDidLoad() {
         super.viewDidLoad()
+        datePicker = UIDatePicker()
+                datePicker?.datePickerMode = .date
+                datePicker?.addTarget(self, action: #selector(NotesViewController.dateChanged(datePicker:)), for: .valueChanged)
+                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(NotesViewController.viewTapped(gestureRecognizer:)))
+                
+                dueDateField.inputView = datePicker
         setUI()
         // Do any additional setup after loading the view.
     }
@@ -61,6 +69,7 @@ class NotesViewController: UIViewController {
         SaveBtn.isEnabled = !note.status
         attachImgBtn.isEnabled = !note.status
         titleNameField.text = note.title
+        dueDateField.text = note.dueDate
         notesDetailedView.text = note.detail
         if let noteimages = note.images?.allObjects as? [Image] {
             images = noteimages
@@ -141,6 +150,7 @@ class NotesViewController: UIViewController {
                     editedNote.detail = notesDetailedView.text
                     editedNote.images = Set(images) as NSSet
                     editedNote.audio = voiceData
+                    editedNote.dueDate = dueDateField.text
                 } catch let error {
                     print(error)
                 }
@@ -151,6 +161,7 @@ class NotesViewController: UIViewController {
                 note.images = Set(images) as NSSet
                 note.audio = voiceData
                 note.date = Date()
+                note.dueDate = dueDateField.text
             }
             PersistentStorage.shared.saveContext()
             self.dismiss(animated: true, completion: nil)
@@ -195,6 +206,20 @@ extension NotesViewController: UITextViewDelegate, UITextFieldDelegate {
                 }
                 return true
     }
+    
+    @objc func dateChanged(datePicker: UIDatePicker){
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy"
+            
+            dueDateField.text = dateFormatter.string(from: datePicker.date)
+            view.endEditing(true)
+        }
+        
+        @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer)
+        {
+            view.endEditing(true)
+        }
 }
 
 //on click of images

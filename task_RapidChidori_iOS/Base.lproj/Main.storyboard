@@ -208,6 +208,15 @@
                                     <constraint firstItem="1jo-Ij-cu2" firstAttribute="top" secondItem="8CA-iO-CNH" secondAttribute="top" id="O6N-Xv-hQc"/>
                                 </constraints>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pick a due date" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L72-nO-4vI">
+                                <rect key="frame" x="30" y="702" width="354" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="g1n-8f-k43"/>
+                                    <constraint firstAttribute="width" constant="354" id="xPZ-Gq-qvX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1gD-pi-wjF"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -219,10 +228,16 @@
                             <constraint firstItem="1gD-pi-wjF" firstAttribute="trailing" secondItem="8CA-iO-CNH" secondAttribute="trailing" constant="30" id="Hsb-FS-GzA"/>
                             <constraint firstItem="0PK-L9-FsD" firstAttribute="leading" secondItem="1gD-pi-wjF" secondAttribute="leading" constant="30" id="QmG-3Z-d8O"/>
                             <constraint firstItem="lL4-0d-Xzq" firstAttribute="height" secondItem="lv3-SW-wXH" secondAttribute="height" multiplier="0.41183" id="Whm-b9-aLT"/>
+                            <constraint firstItem="L72-nO-4vI" firstAttribute="leading" secondItem="1gD-pi-wjF" secondAttribute="leading" constant="30" id="YdP-34-jOH"/>
                             <constraint firstItem="1gD-pi-wjF" firstAttribute="trailing" secondItem="0PK-L9-FsD" secondAttribute="trailing" constant="30" id="ahq-F4-vpZ"/>
+                            <constraint firstItem="1gD-pi-wjF" firstAttribute="trailing" secondItem="L72-nO-4vI" secondAttribute="trailing" constant="287" id="fdF-Uc-b1Q"/>
                             <constraint firstItem="0PK-L9-FsD" firstAttribute="leading" secondItem="lL4-0d-Xzq" secondAttribute="leading" id="hOS-9h-lMG"/>
                             <constraint firstItem="lL4-0d-Xzq" firstAttribute="trailing" secondItem="P1T-MH-Ofz" secondAttribute="trailing" id="hn9-Z9-xNI"/>
+                            <constraint firstItem="L72-nO-4vI" firstAttribute="top" secondItem="0PK-L9-FsD" secondAttribute="bottom" constant="8" symbolic="YES" id="iH5-ym-qkW"/>
+                            <constraint firstItem="8CA-iO-CNH" firstAttribute="top" secondItem="L72-nO-4vI" secondAttribute="bottom" constant="16" id="jdl-Ak-EXG"/>
+                            <constraint firstItem="L72-nO-4vI" firstAttribute="leading" secondItem="1gD-pi-wjF" secondAttribute="leading" constant="30" id="phU-0a-PGi"/>
                             <constraint firstItem="P1T-MH-Ofz" firstAttribute="leading" secondItem="1gD-pi-wjF" secondAttribute="leading" constant="30" id="qyV-Fd-OTw"/>
+                            <constraint firstItem="1gD-pi-wjF" firstAttribute="trailing" secondItem="L72-nO-4vI" secondAttribute="trailing" constant="30" id="tVt-IR-6z9"/>
                             <constraint firstItem="8CA-iO-CNH" firstAttribute="bottom" secondItem="1gD-pi-wjF" secondAttribute="bottom" id="tYG-q5-clB"/>
                             <constraint firstItem="1gD-pi-wjF" firstAttribute="trailing" secondItem="P1T-MH-Ofz" secondAttribute="trailing" constant="30" id="vas-5N-kMc"/>
                             <constraint firstItem="0PK-L9-FsD" firstAttribute="top" secondItem="lL4-0d-Xzq" secondAttribute="bottom" constant="29" id="wCn-3w-PJq"/>
@@ -235,6 +250,7 @@
                         <outlet property="SaveBtn" destination="fPh-sV-L7c" id="Sv7-dV-ekN"/>
                         <outlet property="attachImgBtn" destination="gRG-2z-mPE" id="i4i-TV-0Hd"/>
                         <outlet property="collectionView" destination="0PK-L9-FsD" id="CXz-m9-vuk"/>
+                        <outlet property="dueDateField" destination="L72-nO-4vI" id="5ZS-9r-bK9"/>
                         <outlet property="markCompleteBtn" destination="ZdR-uR-lZh" id="kcK-h1-KrZ"/>
                         <outlet property="notesDetailedView" destination="lL4-0d-Xzq" id="7E7-Ob-S1t"/>
                         <outlet property="titleNameField" destination="P1T-MH-Ofz" id="tZc-a3-72b"/>
@@ -243,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXL-Rd-PiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="456"/>
+            <point key="canvasLocation" x="102.89855072463769" y="455.35714285714283"/>
         </scene>
         <!--Audio View Controller-->
         <scene sceneID="4JE-b4-PvS">

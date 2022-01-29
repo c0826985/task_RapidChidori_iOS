@@ -10,6 +10,7 @@
         <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="dueDate" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -18,6 +19,6 @@
     </entity>
     <elements>
         <element name="Image" positionX="484.0961303710938" positionY="17.502685546875" width="128" height="74"/>
-        <element name="Note" positionX="-63" positionY="-18" width="167.77197265625" height="178"/>
+        <element name="Note" positionX="-63" positionY="-18" width="167.77197265625" height="193"/>
     </elements>
 </model>

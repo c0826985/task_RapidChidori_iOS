@@ -24,6 +24,7 @@ extension Note {
     @NSManaged public var image: Data?
     @NSManaged public var status: Bool
     @NSManaged public var title: String?
+    @NSManaged public var dueDate: String?
     @NSManaged public var images: NSSet?
 
 }
